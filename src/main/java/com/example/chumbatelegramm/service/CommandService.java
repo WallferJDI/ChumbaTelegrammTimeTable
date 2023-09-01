@@ -17,9 +17,11 @@ public class CommandService {
 
     public Message commandProceed(String text)  {
         Message message = new Message();
-        if(text.equals("/timetable")){
+        if(text.equals("/timetable_it")){
 
-            message.setText(timeTableService.requestTimeTable());
+            message.setText(timeTableService.requestTimeTable(6453));
+        }else if(text.equals("/timetable_multimedia")){
+            message.setText(timeTableService.requestTimeTable(6510));
         }else {
             message.setText("What?");
         }

@@ -8,8 +8,8 @@ import java.time.LocalDate;
 public class UrlHandler {
 
 
-    public String generateURL(){
+    public String generateURL(Integer groupId){
         return "https://tahvel.edu.ee/hois_back/schoolBoard/8/timetableByGroup?from="
-                + LocalDate.now()+"T00:00:00Z&studentGroups=6453&thru=" + LocalDate.now().plusDays(5)+"T00:00:00Z";
+                + LocalDate.now()+"T00:00:00Z&studentGroups="+groupId+"&thru=" + LocalDate.now().plusDays(5)+"T00:00:00Z";
     }
 }
